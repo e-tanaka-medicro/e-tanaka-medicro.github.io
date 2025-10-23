@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    line-height: 2;
+    font-size: 18px;
+    color: #333;
+}
+
+main {
+    width: 100%;
+}
+.fukidasi {
+    position: relative;
+    width: 500px;
+    margin: auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    margin-bottom: 5vw;
+    filter: drop-shadow(0px 0px 15px #00000033);
+}
+.fukidasi::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    clip-path: polygon(30% 0, 0 60%, 100% 0);
+    z-index: 2;
+}
+.fukidasi.rev::before {
+    transform: scaleX(-1);
+}
